@@ -55,6 +55,7 @@ void State::init_process_object() {
   // table["homedir"] = uvw::Utilities::OS::homedir();
   // table["tmpdir"] = uvw::Utilities::OS::tmpdir();
   table.set_function("homedir", &csystem::standardpaths::home);
+  table.set_function("tempdir", &csystem::standardpaths::tmpdir);
 
   if (d->argv) {
     table["argv"] = std::vector<std::string>(d->argv, d->argv + d->argc);

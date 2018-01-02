@@ -5,7 +5,7 @@ int main(int argc, const char **argv) {
 
   state.open_libraries(sol::lib::base);
 
-  state.script("print(process.homedir()); print(process.argv[1])");
+  state.script("print(process.homedir()); print(process.cwd())");
 
   return 0;
 }

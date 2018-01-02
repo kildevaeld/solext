@@ -24,7 +24,6 @@ endif (NOT ${SOLEXT_SYSTEM_LUA})
 ## SOL
 include_directories(${LUA_INCLUDEDIR})
 link_directories(${LUA_LIBDIR})
-include_directories(vendor/sol2/single)
 
 ## CSYSTEM
 option(CS_BUILD_CXX "build cxx version" on)

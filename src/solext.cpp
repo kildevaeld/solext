@@ -51,11 +51,9 @@ void State::init_process_object() {
 
   auto table = globals.create_named("process");
 
-  // table["hostname"] = uvw::Utilities::OS::hostname();
-  // table["homedir"] = uvw::Utilities::OS::homedir();
-  // table["tmpdir"] = uvw::Utilities::OS::tmpdir();
   table.set_function("homedir", &csystem::standardpaths::home);
   table.set_function("tmpdir", &csystem::standardpaths::tmpdir);
+  table.set_function("cwd", &csystem::standardpaths::cwd);
 
   if (d->argv) {
     table["argv"] = std::vector<std::string>(d->argv, d->argv + d->argc);

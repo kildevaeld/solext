@@ -1,0 +1,9 @@
+[submodule "vendor/sol2"]
+	path = vendor/sol2
+	url = git@github.com:ThePhD/sol2.git
+[submodule "vendor/lua"]
+	path = vendor/lua
+	url = git@github.com:lua/lua.git
+[submodule "vendor/csystem"]
+	path = vendor/csystem
+	url = git@github.com:kildevaeld/csystem

@@ -18,14 +18,14 @@ public:                                                                        \
 class Module {
 
 public:
-  Module(sol::state_view *state) : m_state(state) {}
+  Module(sol::state *state) : m_state(state) {}
   virtual ~Module() {}
 
   virtual void register_module(sol::table &table) = 0;
 
-  sol::state_view &vm() const { return *m_state; }
+  sol::state &vm() const { return *m_state; }
 
 private:
-  sol::state_view *m_state;
+  sol::state *m_state;
 };
 }
